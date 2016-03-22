@@ -848,7 +848,7 @@
 
       each(_this.images, function (image, i) {
         var src = image.src;
-        var alt = image.alt || getImageName(src);
+        var alt = getImageName(src);
         var url = options.url;
 
         if (!src) {
