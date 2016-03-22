@@ -22,7 +22,14 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', routes);
+//app.use('/', require('./lib/rest-client.js')({
+//    staticFiles : 'resources/media',
+//    urlRoot : 'media',
+//    title : 'Blumenbach Sammlung',
+//    render : false
+//}), function(req, res, next){
+//    return res.render('media', { galleryHtml : req.html });
+//});
 app.use('/users', users);
 app.use('/media', require('./lib/gallery.js')({
     staticFiles : 'resources/media',
@@ -37,6 +44,6 @@ port = process.env.OPENSHIFT_NODEJS_PORT || process.env.PORT || 3001;
 host = process.env.OPENSHIFT_NODEJS_IP;
 app.listen(port, host);
 host = host || 'localhost';
-console.log('node-gallery listening on ' + host  + ':' + port);
+console.log('mediafiles listening on ' + host  + ':' + port);
 
 module.exports = app;
