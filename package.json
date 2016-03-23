@@ -1,6 +1,6 @@
 {
   "name": "mediafiles",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
@@ -14,6 +14,10 @@
     "morgan": "~1.6.1",
     "node-gallery": "^1.1.0",
     "serve-favicon": "~2.3.0",
-    "node-rest-client": "latest"
+    "node-rest-client": "latest",
+    "basic-auth": "latest"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.6.5"
   }
 }
